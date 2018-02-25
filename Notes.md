@@ -8,5 +8,5 @@ IPython stands for Interactive Python and can be used to run scripts (either dir
 Variables in Python are to have specific, case-sensitive names. Variables are also classified by various data types such as float, int, booleans, and strings. 
 
 ## List
-A list can contain any Python type. Although it's not really common, a list can contain a mix of Python types including strings, booleans, floats, etc. List syntax is as follows my_list = [el1, el2]Python List can also contain other list.  
+A list can contain any Python type. Although it's not really common, a list can contain a mix of Python types including strings, booleans, floats, etc. List syntax is as follows `my_list = [el1, el2]` Python List can also contain other list.  
 
