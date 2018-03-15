@@ -5,14 +5,32 @@ This repo serves as a workbook and resource for Applied Data Science with a Spec
 
 (Jake VanderPlas, Preface). 
 
-## Python and Frameworks 
-An introduction to IPython, Anaconda, NumPy, Pandas 
+## Reference Material 
 
-## Statistics with Python
-The application and use cases for NumPy, Pandas 
+### Python Fundamentals
+* Web Development with Python 
+* Web Scraping with Python
+* MongoDB with Python 
+* Django with Python 
+* PyQt 
+* Data Visualization 
 
-## Data Manipulation 
-Examples for Data Index and Selection, Hierarchial Indexing, Aggregation and Grouping and Vectorized String Operations
-
-## Visualization and Machine Learning 
-Introduction to Matplotlib and the Application of Machine Learning with Python
+### Automate the Boring Stuff with Python 
+* Python Basics 
+* Flow Control 
+* Functions 
+* Lists 
+* Dictionaries and Structuring Data 
+* Manipulating Strings 
+* Pattern Matching with Regular Expressions 
+* Reading and Writing Files 
+* Organizing Files 
+* Debugging 
+* Web Scraping 
+* Working with Excel Spreadsheets 
+* Working with PDF and Word Documents 
+* Working with CSV Files and JSON Data 
+* Keeping Time, Scheduling Tasks and Launching Programs 
+* Sending Email and Text Messages 
+* Manipulating Images 
+* Controlling the Keyboard and Mouse with GUI Animation 

@@ -1,4 +1,4 @@
-# Notes on Chapter 1 from Data Camp 
+# Notes from Data Camp 
 Python for Data Science 
 
 ## Interactive Python
