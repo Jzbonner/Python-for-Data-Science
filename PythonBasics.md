@@ -64,3 +64,7 @@ Selecting series from your datasets can be done individually or simultaneously. 
 ## Counting Values and Basic Plotting in Python 
 ~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
 
+## Filtering Data in Python with Boolean Indexes 
+~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
+
+
