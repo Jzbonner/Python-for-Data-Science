@@ -19,4 +19,48 @@ Pandas has two unique data structures: Data Frames and Series. A _data frame_ is
 * Data frames can load data through a number of different data structures and files. 
     * Including list and dictionaries, csv files, excel files and database records 
 
+## Dataframes in Python with Examples 
+The `datasets` object is a list where each item is a dataframe corresponding to one of the SQL queries in the Mode report. So `datasets[0]` is a dataframe object within the `datasets` list. Python allows you to give libraries aliases, so that you can reference them quickly in your code. The pandas library in python is typically aliased as `pd`. 
+
+```python 
+import pandas as pd 
+```
+
+SQL refers to missing values as `null`, by using the method `fillna()` you can replace missing values with empty strings in `datasets`. 
+
+Example Utilization of Pandas and Datasets in Python: Analyzing web traffic data from a nonprofit website [Watsi](http://watsi.org/) 
+
+Row in Dataset | Description 
+--- | ---
+`referrer` | The url that referred the user to the site (if available). For example, if someone arrived at the page through a Facebook link, referrer would be https://www.facebook.com 
+`timestamp` |  The time the event occurred
+`title` | The title of the page the user visited on the Watsi website
+`url` | The url the user visited. For example, https://watsi.org/team/the-meteor-chef
+`user_agent` | The software the user used to accessed the site, including platform, browser, and extensions
+`user_id` | A unique id for each user (normally they’d be numbers—we’ve turned them into anonymous names instead)
+`referrer_domain` | The domain of the url that referred the user to the site. For example, “facebook.com”
+`website_section` | The section of the website visited. For example, the section of https://watsi.org/team/the-meteor-chef is “team”
+`platform` |  The device platform the user visited from. Possible values are "Desktop" and "Mobile"
+
+Brackets are utilized to select a value in a list or dictionary, and similarly you can use brackets to select a column in the DataFrame. For Example: 
+
+```python 
+input ~ 
+data['url]
+
+output ~ 
+0                        https://watsi.org/
+1    https://watsi.org/team/the-meteor-chef
+2              https://watsi.org/gift-cards
+3                        https://watsi.org/
+4                        https://watsi.org/
+Name: url, dtype: object
+```
+
+You can select rows by using brackets and row indexes. By using :notation between brackets you can select specific values according to their indexes. For example `data[:3]` wil provide you with the values up to index 3, `data[4:7]` will provide you with the values from index 4 up to - but not including - index 7, and `data[4997:]` will provide you with everything from index 4997 onwards. In order to select rows you have to use the `data.ix[]` method on your datasets. 
+
+Selecting series from your datasets can be done individually or simultaneously. Meaning that you can select rows and columns separately or together. For our above example you may utilize something like `data['title'][:3]` to select the first three rows of the `title` column or `data['referrer'][10:15]` to select the indexes from 10 to 15 of the `referrer` column. 
+
+## Counting Values and Basic Plotting in Python 
+~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
 
