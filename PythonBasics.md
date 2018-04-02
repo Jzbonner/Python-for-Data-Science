@@ -20,7 +20,7 @@ Pandas has two unique data structures: Data Frames and Series. A _data frame_ is
     * Including list and dictionaries, csv files, excel files and database records 
 
 ## Dataframes in Python with Examples 
-The `datasets` object is a list where each item is a dataframe corresponding to one of the SQL queries in the Mode report. So `datasets[0]` is a dataframe object within the `datasets` list. Python allows you to give libraries aliases, so that you can reference them quickly in your code. The pandas library in python is typically aliased as `pd`. 
+The `datasets` object is a list where each item is a dataframe corresponding to one of the SQL queries in the Mode report (examples in subsequent sections will reference csv files as the sudo SQL database however [Mode](https://modeanalytics.com/tutorial/reports/326495548afb/python) utilizes an predefined SQL query to bring in data to their interactive python notebook). So `datasets[0]` is a dataframe object within the `datasets` list. Python allows you to give libraries aliases, so that you can reference them quickly in your code. The pandas library in python is typically aliased as `pd`. 
 
 ```python 
 import pandas as pd 
@@ -28,7 +28,7 @@ import pandas as pd
 
 SQL refers to missing values as `null`, by using the method `fillna()` you can replace missing values with empty strings in `datasets`. 
 
-Example Utilization of Pandas and Datasets in Python: Analyzing web traffic data from a nonprofit website [Watsi](http://watsi.org/) 
+Example Utilization of Pandas and Datasets in Python: Analyzing web traffic data from a nonprofit website [Watsi](http://watsi.org/) by utilization of a predefined SQL query for historic data from the site. 
 
 Row in Dataset | Description 
 --- | ---
@@ -63,6 +63,22 @@ Selecting series from your datasets can be done individually or simultaneously. 
 
 ## Counting Values and Basic Plotting in Python 
 ~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
+~ SideNote: VSCode does have an extension for previewing Jupyter Notebook files in your editor [VSCode Jupyter Notebook Previewer](https://marketplace.visualstudio.com/items?itemName=jithurjacob.nbpreviewer)
+
+For this section and future sections, we will be working with a CSV file containing information on the FDIC Failed Bank List, entitled _Finance.csv_. 
+
+> Federal Deposit Insurance Corporation — The FDIC is often appointed as receiver for failed banks. This list includes banks which have failed since October 1, 2000.
+
+By utilizing some of the previous concepts discussed above, we will set up python environment that loads locally stored csv information and presents the first few rows of the csv in a `dataframe`. All sample csv data is being taken from [Data.gov](https://catalog.data.gov/dataset). Priming your csv file in Jupyter Notebook should begin as follows: 
+
+```python 
+import pandas as pd
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+data.head(n=8)
+```
 
 ## Filtering Data in Python with Boolean Indexes 
 ~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
