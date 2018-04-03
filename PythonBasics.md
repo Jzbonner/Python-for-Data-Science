@@ -80,6 +80,8 @@ data.fillna('')
 data.head(n=8)
 ```
 
+A result of the above operation can be seen in the Jupyter Notebook file entitled _Python, DataFrames, and Libraries Workbook.ipynb_. 
+
 ## Filtering Data in Python with Boolean Indexes 
 ~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
 
