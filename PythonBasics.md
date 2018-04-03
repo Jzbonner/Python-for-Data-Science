@@ -79,8 +79,52 @@ data.fillna('')
 
 data.head(n=8)
 ```
+A result of the above operation can be seen in the Jupyter Notebook file entitled _Python, DataFrames, and Libraries Workbook.ipynb_. The line `data.head(n=8)` will provide you with a general visualization of how the raw data in the CSV file has been translated into a dataset. From here we will use this format to find the 20 most popular (read frequency of) failed bank names from the raw data and visually plot the results in a bar chart. 
 
-A result of the above operation can be seen in the Jupyter Notebook file entitled _Python, DataFrames, and Libraries Workbook.ipynb_. 
+To achieve the above goals we will have to import a very important library as well as a script to display our plotted data inline. 
+
+> Matplotlib is a 2d Python plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+
+A simple aggregate function that you can use to achieve our desired outcome above is the `.value_counts()` method. This will allow you to pull frequency data for a specified value from the dataset.  Keeping in mind the use of bracket notation for placing parameter constraints on your index, we can easily achieve a raw list of of the most popular (i.e. frequent) failed bank names from our dataset: 
+
+```python 
+"""
+used to find the 20 most popular failed bank names out of the dataset
+"""
+
+import pandas as pd
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+data['Bank Name'].value_counts()[:21]
+```
+
+We are using the `Bank Name` column from our dataset and picking the pertinent information from that series to begin this process. From here we need to utilize the Matplotlib library to plot this data into a bar chart. Luckily, this is done by the use of one method, `.plot()`. You can then specify the particular plotting visual you would like to use based on the data; for this example it will be the bar chart, or `.plot(kind='barh')`. Be mindful of your import dependencies and also take note of the implementation format for customizing our plotted data: 
+
+```python 
+"""
+used to find the 20 most popular failed bank names out of the dataset and 
+plot them in a visual bar chart.
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+data['Bank Name'].value_counts()[:21].plot(kind='barh')
+
+# Customization to plot visual for readability 
+plt.xticks(fontsize=14, fontweight='bold')
+plt.yticks(fontsize=9)
+plt.xlabel('Frequency')
+plt.ylabel('Bank Names')
+plt.title('Frequency of Failed Bank Names')
+```
+* For additional information on the Matplotlib library please refer to this [documentation](https://matplotlib.org/contents.html)
 
 ## Filtering Data in Python with Boolean Indexes 
 ~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
