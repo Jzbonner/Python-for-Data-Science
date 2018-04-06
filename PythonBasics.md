@@ -130,5 +130,64 @@ plt.title('Frequency of Failed Bank Names')
 Segmentation in coding is the division into separate parts or sections. Filtering data in python can be done via the help of Boolean indexes. A `boolean index` is a series composed of `TRUE` or `FALSE` values that correspond to rows in the dataset. This type of indexing could be useful in identifying trends and movement within a data set. Looking at our `Finance.csv` data we could be interested in determining the city with the highest number of failed banks specifically in Georgia. To do this we would need to create a `boolean index` that filters all the Bank Names that are linked to GA and place those results into an a new dataset that could then be mutated further to observe city frequency. 
 
 ```python 
+import pandas as pd 
+import matplotlib.pyplot as plt 
+%matplotlib inline 
 
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+# Here we have to take our boolean index operation and transmute it into a dataset so that it can be further analyzed by methods in the pandas library
+
+statefilter_Index = (data['ST'] == 'GA')
+state_Index = data[statefilter_Index]
+state_Index['City'].value_counts()[:20]
 ```
+
+The above code shows you how to do just that and return a list of the top 20 most frequent cities with failed banks. Creating new datasets from our original parsed csv file, allows us to utilize a boolean index to filter our data and then prime that specific dataset to see a list of the top 20 most frequent cities with failed banks. From there we can use the matplotlib python library to create a visualization: 
+
+```python 
+import pandas as pd 
+import matplotlib.pyplot as plt 
+%matplotlib inline 
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+statefilter_Index = (data['ST'] == 'GA')
+state_Index = data[statefilter_Index]
+state_Index['City'].value_counts()[:10].plot(kind='bar')
+
+# plot visual customization 
+plt.xlabel('Cities')
+plt.ylabel('Number of Banks')
+plt.title('Frequency of Failed Banks by City in Georgia')
+```
+
+You don't have to specify an index search based off of `Series` titles. Developers can also use `boolean indexes` with strings by utilizing the `.str.contains()` method. For instance if you wanted to find a list of Bank Names that contain the string "First", then you would accomplish using the `.str.contains()` method as follows: 
+
+```python 
+import pandas as pd 
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+bn_filter_index = data['Bank Name'].str.contains('First')
+bn_index = data[bn_filter_index]
+bn_index
+```
+Utilizing the above setup we can then use the `.tolist()` method to generate a list of the CERT numbers for all failed banks that contain the string "First" in their Bank Name. 
+
+```python 
+import pandas as pd 
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+bn_filter_index = data['Bank Name'].str.contains('First')
+bn_index = data[bn_filter_index]
+bn_index['CERT'].tolist()
+```
+
+## Deriving New Columns and Defining Python Functions 
+~ Refer to Jupyter Notebook files for more in depth examples. 
