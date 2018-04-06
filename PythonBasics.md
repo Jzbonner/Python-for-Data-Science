@@ -127,6 +127,8 @@ plt.title('Frequency of Failed Bank Names')
 * For additional information on the Matplotlib library please refer to this [documentation](https://matplotlib.org/contents.html)
 
 ## Filtering Data in Python with Boolean Indexes 
-~ Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
+Segmentation in coding is the division into separate parts or sections. Filtering data in python can be done via the help of Boolean indexes. A `boolean index` is a series composed of `TRUE` or `FALSE` values that correspond to rows in the dataset. This type of indexing could be useful in identifying trends and movement within a data set. Looking at our `Finance.csv` data we could be interested in determining the city with the highest number of failed banks specifically in Georgia. To do this we would need to create a `boolean index` that filters all the Bank Names that are linked to GA and place those results into an a new dataset that could then be mutated further to observe city frequency. 
 
+```python 
 
+```
