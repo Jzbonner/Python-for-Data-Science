@@ -190,4 +190,59 @@ bn_index['CERT'].tolist()
 ```
 
 ## Deriving New Columns and Defining Python Functions 
-~ Refer to Jupyter Notebook files for more in depth examples. 
+Creating a new column in a dataset is like creating a new key-value pair in a dictionary. By assigning values to the new column name you add a column to the DataFrame. For instance adding a new column to your data set may look something like this: 
+
+```python 
+import pandas as pd 
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+data['new'] = 'new data'
+data[:3]
+```
+
+Lets say you wanted to run a function through the dataset to determine whether or not the failed bank was located in the north east or the south west for the first 200 data entries. To do this you would need to define a function that checks each row for values that match those present in the function. We would need to first define the specific function and its return values and then `.apply()` it to our dataframe as a whole. Your resulting code with functionality for plotting using the Matplotlib library should be as follows: 
+
+```python 
+import pandas as pd 
+import matplotlib.pyplot as plt 
+%matplotlib inline 
+
+data = pd.read_csv('Finance.csv')
+data.fillna('')
+
+north_east = ['PA', 'MD', 'DE', 'NJ', 'RI', 'CT', 'MA', 'NH', 'ME', 'VT', 'NY']
+south_west = ['AZ', 'NM', 'NV', 'UT']
+
+def is_in_region(state): 
+    if state in north_east: 
+        return 'Northeast'
+    elif state in south_west: 
+        return 'Southwest'
+    else: 
+        return 'Other Regions'
+        
+data['ST'][:200].apply(is_in_region)    
+
+# importing the derived data into a new column
+data['region'] = data['ST'].apply(is_in_region)
+
+# To ensure that you accurately selected multiple columns of your data frame. 
+data[['ST', 'region']][0:10]
+
+# plotting an analysis of the information in a bar graph 
+data['region'][:200].value_counts().plot(kind='bar', figsize=(10,8))
+
+plt.title('Frequency of Failed Banks in the NE and SW compared to Other Regions')
+plt.ylabel('Frequency')
+plt.xlabel('Regions')
+```
+
+Further analysis can be made to determine the correlation between frequency of failed banks in the north east, the south west and the other regions in the United States. We will cover some of those details in later sections but hopefully this gives you insight on how to manipulate column data in a data frame, how to define functions and how to apply them to data frames. 
+
+## Pandas .groupby(), Lambada Functions and Pivot Tables wih NumPy 
+~ Refer to Jupyter Notebooks for in depth examples. 
+
+
+
