@@ -14,6 +14,7 @@ For Utilizing the Conda Package Manager (Windows 10 Batch) you will need the fol
 * Important for initializing a Quandl API key in Windows 10 using batch: `cmd /V /C "set "QUANDL_API_KEY=<api-key>" && zipline ingest -b quandl"`
 
 For utilizing the Conda Package Manager with VSCode, you can skip setting up a conda dev environment since and just install zipline and jupyter notebook to your initial dev workspace. 
+* You will have access to the conda package manager if you already have Anaconda installed but if not you can install it via pip by the following command `pip install conda` 
 * Use `conda install -c Quantopian zipline` to install Quantopian's Zipline locally to your dev workspace
 * Use `pip3 install jupyter` to install the Jupyter Notebook platform to be ran locally via a localhost, for example `http://localhost:8080` 
 * Initialize your zipline installation by connecting it to Quandl's datasets via your Quandl API key. 
