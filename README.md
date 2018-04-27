@@ -34,3 +34,14 @@ This repo serves as a workbook and resource for Applied Data Science with a Spec
 * Sending Email and Text Messages 
 * Manipulating Images 
 * Controlling the Keyboard and Mouse with GUI Animation 
+
+### Financial Modeling and Algorithmic Trading with Python 
+* Financial Modeling in Python :: Fletcher and Gardner 
+    * Basic Mathematical Tools 
+    * Market: Curves and Surfaces 
+    * Data Model
+    * Timeline: Events and Controller 
+    * The Hull-White Model
+    * Price Using Numerical Methods 
+    * Pricing Financial Structures in Hull-White 
+    * Black-Scholes Modeling 

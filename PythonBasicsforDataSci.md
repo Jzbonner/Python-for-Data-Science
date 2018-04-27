@@ -59,7 +59,7 @@ Name: url, dtype: object
 
 You can select rows by using brackets and row indexes. By using :notation between brackets you can select specific values according to their indexes. For example `data[:3]` wil provide you with the values up to index 3, `data[4:7]` will provide you with the values from index 4 up to - but not including - index 7, and `data[4997:]` will provide you with everything from index 4997 onwards. In order to select rows you have to use the `data.ix[]` method on your datasets. 
 
-Selecting series from your datasets can be done individually or simultaneously. Meaning that you can select rows and columns separately or together. For our above example you may utilize something like `data['title'][:3]` to select the first three rows of the `title` column or `data['referrer'][10:15]` to select the indexes from 10 to 15 of the `referrer` column. 
+Selecting series from your datasets can be done individually or simultaneously. Meaning that you can select rows and columns separately or together. For our above example you may utilize something like `data['title'][:3]` to select the first three rows of the `title` column or `data['referrer'][10:15]` to select the indexes from 10 to 15 of the `referrer` column. Selecting multiple series can be done with the following syntax `data[['referrer', 'title']]`
 
 ## Counting Values and Basic Plotting in Python 
 * Refer to Files on Jupyter Notebook for visual representations of the subsequent concepts. 
