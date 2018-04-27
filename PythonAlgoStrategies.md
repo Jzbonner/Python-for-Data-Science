@@ -1,7 +1,5 @@
-# The Efficient Frontier: Markowitz Portfolio Optimization in Python 
-> In this blog post you will learn about the basic idea behind Markowitz portfolio optimization as well as how to do it in Python. We will then show how you can create a simple backtest that re-balances its portfolio in a Markowitz-optimal way. We hope you enjoy it and get a little more enlightened in the process.
-
-(_Quantopian Blog_)
+# Portfolio Management, Strategies, and Optimization in Python 
+> In this introductory section you will learn how to go about setting up Quantopian's Zipline backtester to work in tandem with Jupyter Notebook. Zipline is a Pythonic algorithmic trading library. It is an event-driven system for backtesting. Zipline is currently used in production as the backtesting and live-trading engine powering Quantopian -- a free, community-centered, hosted platform for building and executing trading strategies. These notes will also include information about portfolio management and optimization through algorithmic strategies. 
 
 For additional documentation on the Quantopian Zipline backtester please refer to this reference guide: http://www.zipline.io/index.html. However a brief description of how to setup the Quantopian Zipline backtester and the Jupyter Notebook locally can be found below: 
 
@@ -20,7 +18,4 @@ For utilizing the Conda Package Manager with VSCode, you can skip setting up a c
 * Initialize your zipline installation by connecting it to Quandl's datasets via your Quandl API key. 
 
 After the following is completed you are now ready to work from either Windows 10 CMD (batch) prompt or from directly within your VSCode Python Workspace environment. Utilizing the file manager native to VSCode makes it easier to keep track of Python files, Jupyter Notebooks, etc. So I find it best to utilize VSCode. Nothing wrong with using what you feel is most comfortable. 
-
-
-
 
