@@ -1,18 +1,51 @@
 # Python for Data Science
 This repo serves as a workbook and resource for Applied Data Science with a Specialization in Python. 
 
+<<<<<<< HEAD
 > Data science comprises three distinct and overlapping areas: the skills of a statistician who knows how to model and summarize datasets (which are growing ever larger); the skills of a computer scientist who can design and use algorithms to efficiently store, process, and visualize this data; and the domain expertise—what we might think of as "classical" training in a subject—necessary both to formulate the right questions and to put their answers in context" 
+=======
+> Data science comprises three distinct and overlapping areas: the skills of a statistician who knows how to model and summarize datasets (which are growing ever larger); the skills of a computer scientist who can design and use algorithms to efficiently store, process, and visualize this data; and the domain expertise—what we might think of as "classical" training in a subject—necessary both to formulate the right questions and to put their answers in context
+>>>>>>> gh-pages
 
 (Jake VanderPlas, Preface). 
 
-## Python and Frameworks 
-An introduction to IPython, Anaconda, NumPy, Pandas 
+## Reference Material 
 
-## Statistics with Python
-The application and use cases for NumPy, Pandas 
+### Python Fundamentals
+* Web Development with Python 
+* Web Scraping with Python
+* MongoDB with Python 
+* Django with Python 
+* PyQt 
+* Data Visualization 
 
-## Data Manipulation 
-Examples for Data Index and Selection, Hierarchial Indexing, Aggregation and Grouping and Vectorized String Operations
+### Automate the Boring Stuff with Python 
+* Python Basics 
+* Flow Control 
+* Functions 
+* Lists 
+* Dictionaries and Structuring Data 
+* Manipulating Strings 
+* Pattern Matching with Regular Expressions 
+* Reading and Writing Files 
+* Organizing Files 
+* Debugging 
+* Web Scraping 
+* Working with Excel Spreadsheets 
+* Working with PDF and Word Documents 
+* Working with CSV Files and JSON Data 
+* Keeping Time, Scheduling Tasks and Launching Programs 
+* Sending Email and Text Messages 
+* Manipulating Images 
+* Controlling the Keyboard and Mouse with GUI Animation 
 
-## Visualization and Machine Learning 
-Introduction to Matplotlib and the Application of Machine Learning with Python
+### Financial Modeling and Algorithmic Trading with Python 
+* Financial Modeling in Python :: Fletcher and Gardner 
+    * Basic Mathematical Tools 
+    * Market: Curves and Surfaces 
+    * Data Model
+    * Timeline: Events and Controller 
+    * The Hull-White Model
+    * Price Using Numerical Methods 
+    * Pricing Financial Structures in Hull-White 
+    * Black-Scholes Modeling 
