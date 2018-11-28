@@ -24,5 +24,5 @@ Completing the above steps will allow you to have access to Quandl's Wiki Datase
 
 > Quandl WIKI Bundle By default zipline comes with the quandl data bundle which uses Quandl's WIKI datasets. The quandl data bundle includes daily pricing data, splits, cash dividends, and asset metadata. To ingest the quandl data bundle we create an account on quandl.com to get an API key to be able to make more API requests per day. 
 
-Please refer to the folder entitled `AlgoDocs` for further information regarding Algorithmic Python Strategies and Examples. 
+Please refer to the folder entitled [AlgoStrategies]() for further information regarding Algorithmic Python Strategies and Examples. 
 
