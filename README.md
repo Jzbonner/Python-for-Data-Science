@@ -5,6 +5,8 @@ This repo serves as a workbook and resource for Applied Data Science with a Spec
 
 (Jake VanderPlas, Preface). 
 
+![Diagram1](https://cdn-images-1.medium.com/max/1600/1*8-NNHZhRVb5EPHK5iin92Q.png)
+
 ## Reference Material 
 
 ### Python Fundamentals
